@@ -12,7 +12,6 @@
   import Banner from "./Banner.vue"
   import Hots from "./Hots.vue";
   import Others from './Others.vue'
-
   export default {
     data(){
       return{

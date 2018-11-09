@@ -22,14 +22,11 @@
 </template>
 
 <script>
-  import Tishi from './Tishi.vue';
 
-    export default {
+  export default {
         //无需写template，data仍然以函数返回，其他属性照旧
       props:["item1"],
-      components:{
-        Tishi
-      },
+    components: {},
       methods:{
         shop:function () {
          this.store.commit("buy",this.item1);

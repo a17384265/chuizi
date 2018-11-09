@@ -6,11 +6,11 @@
 </template>
 
 <script>
-  import Bizhi from './Bizhi.vue'
+
   import Xiangqing from './Xiangqing.vue'
     export default {
       components:{
-        Bizhi,
+
         Xiangqing
       },
       props:["items1"]

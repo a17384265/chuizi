@@ -8,8 +8,12 @@ import axios from 'axios'
 import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import  VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
-axios.defaults.baseURL="http://192.168.0.91:3000/";
+Vue.use(VueAwesomeSwiper);
+
+axios.defaults.baseURL = "http://127.0.0.1:3000/";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
@@ -18,6 +22,8 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 });

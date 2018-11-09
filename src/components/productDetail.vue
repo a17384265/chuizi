@@ -49,8 +49,7 @@
               <el-button ><router-link to="" class="chakan">现在购买</router-link></el-button>
             </el-row>
           </div>
-
-        </div>
+      </div>
     </div>
     <br><br><br><br><br><br>
   </div>
@@ -58,8 +57,8 @@
 
 <script>
   import axios from "axios"
-  import Product from "./Information.vue";
-    export default {
+
+  export default {
         //无需写template，data仍然以函数返回，其他属性照旧
         data(){
             return {

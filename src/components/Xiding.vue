@@ -2,6 +2,8 @@
 
   <div class="banner " id="banner"  :class="isFixed== true?'isFixed':''">
     <div class="xiding">
+      <!--<input type="text" class="searchBox" >-->
+      <!--<input type="submit" class="search" value="搜索" @click="search">-->
       <router-link to="/" class="router-link">首页</router-link>
       <router-link to="/products" class="router-link">全部商品</router-link>
     </div>
@@ -15,7 +17,8 @@
         //无需写template，data仍然以函数返回，其他属性照旧
         data(){
             return {
-              isFixed:false
+              isFixed: false,
+
             }
         },
         props: [],
@@ -33,6 +36,8 @@
               }
             })
           },
+          search(){
+          }
         },
       mounted(){
         window.addEventListener('scroll', this.handleScroll);
@@ -40,7 +45,6 @@
       destroyed(){
         window.removeEventListener('scroll', this.handleScroll);
       }
-
     }
 </script>
 
@@ -76,13 +80,23 @@
     border: 2px;
     background-color: #f7f7f7;
   }
-
   .isFixed{
     position: fixed;
     top: 0px;
     z-index: 4;
     width: 100%;
   }
+
+  .search {
+    float: right;
+  }
+
+  .searchBox {
+    width: 150px;
+    height: 20px;
+    float: right;
+  }
+
 
 
 </style>

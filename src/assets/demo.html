@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>遮罩层实例</title>
+</head>
+<body>
+<button onclick="coverDiv()">显示</button>
+</body>
+<script type="text/javascript">
+  //显示遮罩
+  function coverDiv() {
+    var procbg = document.createElement("div"); //首先创建一个div
+    procbg.setAttribute("id", "mybg"); //定义该div的id
+    procbg.style.background = "#000000";
+    procbg.style.width = "100%";
+    procbg.style.height = "100%";
+    procbg.style.position = "fixed";
+    procbg.style.top = "0";
+    procbg.style.left = "0";
+    procbg.style.zIndex = "500";
+    procbg.style.opacity = "0.6";
+    procbg.style.filter = "Alpha(opacity=70)";
+    document.body.appendChild(procbg);
+  }
+  //取消遮罩
+  function hide() {
+    var body = document.getElementsByTagName("body");
+    var mybg = document.getElementById("mybg");
+    body[0].removeChild(mybg);
+  }
+</script>
+</html>
+

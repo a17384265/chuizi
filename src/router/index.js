@@ -3,11 +3,9 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import ShowAll from '@/components/ShowAll'
 import productDetail from '@/components/productDetail'
-import Vuex from 'vuex'
-
+import Order from '@/components/Order'
+import login from '@/components/login'
 Vue.use(Router);
-Vue.use(Vuex);
-
 export default new Router({
   routes: [
     {
@@ -24,6 +22,16 @@ export default new Router({
       path: '/productDetail',
       name: 'productDetail',
       component:productDetail,
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: Order,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
     }
   ]
 })
